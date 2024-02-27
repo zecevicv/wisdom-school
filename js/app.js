@@ -24,7 +24,6 @@ headerLinks.forEach((a) => {
   });
 });
 
-
 /* #Accordion
 ================================================== */
 const accordions = document.querySelectorAll('.accordion');
@@ -50,7 +49,7 @@ if (accordions) {
           });
 
           collapsible.classList.add('show');
-  
+
           if (collapsible.classList.contains('show')) {
             gsap.to(collapse, {
               height: 'auto',
@@ -68,15 +67,15 @@ if (accordions) {
       accordion.addEventListener('click', (e) => {
         if (e.target.closest('.collapse-toggler')) {
           e.preventDefault();
-  
+
           const collapsible = e.target.closest('.collapsible');
           const collapse = collapsible.querySelector('.collapse');
-  
+
           if (!accordion.classList.contains('no-close')) {
             collapsibles.forEach((coll) => {
               if (coll.classList.contains('show') && coll != collapsible) {
                 collCollapse = coll.querySelector('.collapse');
-  
+
                 coll.classList.remove('show');
                 gsap.to(collCollapse, {
                   height: '0'
@@ -84,9 +83,9 @@ if (accordions) {
               }
             });
           }
-  
+
           collapsible.classList.toggle('show');
-  
+
           if (collapsible.classList.contains('show')) {
             gsap.to(collapse, {
               height: 'auto',
@@ -127,4 +126,13 @@ const swiper = new Swiper('.swiper', {
   },
 
   autoplay: true
+});
+
+/* #Open Gallery Btn
+================================================== */
+const openGalleryBtn = document.querySelector('#openGalleryBtn');
+
+openGalleryBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('#galleryGrid ul li:nth-of-type(1) a').click();
 });

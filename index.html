@@ -15,7 +15,20 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/photoswipe.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script type="module">
+    import PhotoSwipeLightbox from './js/photoswipe-lightbox.esm.js';
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#galleryGrid',
+      children: 'a',
+      zoom: false,
+      pswpModule: () => import('./js/photoswipe.esm.js')
+    });
+    lightbox.init();
+  </script>
 
 </head>
 
@@ -131,7 +144,7 @@
         <div class="img">
           <!-- Figure -->
           <figure>
-            <img src="./img/about-1.jpg" alt="wisdom-school-fun-img">
+            <img src="img/about-1.jpg" alt="wisdom-school-fun-img">
             <figcaption>
               <h3 class="h5">
                 Fun
@@ -140,7 +153,7 @@
           </figure>
           <!-- Figure -->
           <figure>
-            <img src="./img/about-2.jpg" alt="wisdom-school-fun-img">
+            <img src="img/about-2.jpg" alt="wisdom-school-fun-img">
             <figcaption>
               <h3 class="h5">
                 Warmth
@@ -149,7 +162,7 @@
           </figure>
           <!-- Figure -->
           <figure>
-            <img src="./img/about-3.jpg" alt="wisdom-school-fun-img">
+            <img src="img/about-3.jpg" alt="wisdom-school-fun-img">
             <figcaption>
               <h3 class="h5">
                 Creativity
@@ -158,7 +171,7 @@
           </figure>
           <!-- Figure -->
           <figure>
-            <img src="./img/about-4.jpg" alt="wisdom-school-fun-img">
+            <img src="img/about-4.jpg" alt="wisdom-school-fun-img">
             <figcaption>
               <h3 class="h5">
                 Connection
@@ -317,9 +330,9 @@
           <div class="text">
             <h3 class="h3">Preschool (4-6)</h3>
             <p class="p1">Introduce your little ones to the wonders of language. This program combines play and education to build a strong foundation in English, setting the stage for a lifelong love of language.</p>
-            <a href="#" class="link p1 bold">
+            <!-- <a href="#" class="link p1 bold">
               Read More <img src="img/icons/chevron-right-red.svg" alt="wisdom-school-chevron-right-icon">
-            </a>
+            </a> -->
           </div>
         </div>
         <!-- Media Box -->
@@ -330,9 +343,9 @@
           <div class="text">
             <h3 class="h3">Primary School (7-14)</h3>
             <p class="p1">Ignite the passion for language in your teenagers. Engaging lessons and interactive activities empower teens to express themselves confidently in English, fostering both linguistic proficiency and self-assurance.</p>
-            <a href="#" class="link p1 bold">
+            <!-- <a href="#" class="link p1 bold">
               Read More <img src="img/icons/chevron-right-red.svg" alt="wisdom-school-chevron-right-icon">
-            </a>
+            </a> -->
           </div>
         </div>
         <!-- Media Box -->
@@ -343,9 +356,9 @@
           <div class="text">
             <h3 class="h3">High School (14-18)</h3>
             <p class="p1">Ignite the passion for language in your teenagers. Engaging lessons and interactive activities empower teens to express themselves confidently in English, fostering both linguistic proficiency and self-assurance.</p>
-            <a href="#" class="link p1 bold">
+            <!-- <a href="#" class="link p1 bold">
               Read More <img src="img/icons/chevron-right-red.svg" alt="wisdom-school-chevron-right-icon">
-            </a>
+            </a> -->
           </div>
         </div>
         <!-- Media Box -->
@@ -356,9 +369,9 @@
           <div class="text">
             <h3 class="h3">Adults</h3>
             <p class="p1">Designed for those eager to refine their skills in a flexible and supportive environment. Whether you're a beginner or seeking to polish your English, our comprehensive courses cater to the diverse needs of adult learners.</p>
-            <a href="#" class="link p1 bold">
+            <!-- <a href="#" class="link p1 bold">
               Read More <img src="img/icons/chevron-right-red.svg" alt="wisdom-school-chevron-right-icon">
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -440,48 +453,66 @@
       <!-- Heading -->
       <div class="gallery-heading">
         <h2 class="h2">Gallery</h2>
-        <a href="#" class="link p1 bold">
-          View All <img src="img/icons/chevron-right-red.svg" alt="wisdom-school-chevron-right-icon">
+        <a href="#" class="link p1 bold" id="openGalleryBtn">
+          View Images <img src="img/icons/chevron-right-red.svg" alt="wisdom-school-chevron-right-icon">
         </a>
       </div>
       <!-- Grid -->
-      <div class="gallery-grid">
+      <div class="gallery-grid" id="galleryGrid">
         <ul>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-1.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-1.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-1.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-2.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-2.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-2.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-3.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-3.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-3.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-4.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-4.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-4.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-5.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-5.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-5.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-6.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-6.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-6.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-7.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-7.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-7.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-8.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-8.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-8.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
           <!-- Item -->
           <li>
-            <img src="img/gallery/gallery-9.jpg" alt="wisdom-school-gallery-img">
+            <a href="#" data-pswp-src="img/gallery/thumbnails/gallery-9.jpg" data-pswp-width="1440" data-pswp-height="810">
+              <img src="img/gallery/thumbnails/gallery-9.jpg" alt="wisdom-school-gallery-img">
+            </a>
           </li>
         </ul>
       </div>
@@ -619,7 +650,7 @@
           <ul>
             <!-- Item -->
             <li>
-              <img src="./img/icons/location-white.svg" alt="wisdom-school-location-icon">
+              <img src="img/icons/location-white.svg" alt="wisdom-school-location-icon">
               <p class="p2">
                 Stjepana Mitrova Ljubise 7,<br>Novi Sad
               </p>
@@ -627,7 +658,7 @@
             <!-- Item -->
             <li>
               <a href="tel:+381693108991">
-                <img src="./img/icons/phone-white.svg" alt="wisdom-school-phone-icon">
+                <img src="img/icons/phone-white.svg" alt="wisdom-school-phone-icon">
                 <p class="p2">
                   069/310-8991
                 </p>
@@ -636,7 +667,7 @@
             <!-- Item -->
             <li>
               <a href="mailto:wisdomschoolns@gmail.com">
-                <img src="./img/icons/mail-white.svg" alt="wisdom-school-mail-icon">
+                <img src="img/icons/mail-white.svg" alt="wisdom-school-mail-icon">
                 <p class="p2">
                   wisdomschoolns@gmail.com
                 </p>
