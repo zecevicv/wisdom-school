@@ -4,6 +4,7 @@ const header = document.querySelector('.header');
 const hamburgerBtn = document.querySelector('.header .hamburger');
 const headerNav = document.querySelector('.header-nav');
 const body = document.querySelector('body');
+const headerLinks = document.querySelectorAll('.header-links a');
 
 if (hamburgerBtn) {
   hamburgerBtn.addEventListener('click', (e) => {
@@ -12,6 +13,17 @@ if (hamburgerBtn) {
     body.classList.toggle('no-scroll');
   });
 }
+
+headerLinks.forEach((a) => {
+  a.addEventListener('click', (e) => {
+    if (header.classList.contains('show-menu')) {
+      hamburgerBtn.classList.remove('is-active');
+      header.classList.remove('show-menu');
+      body.classList.remove('no-scroll');
+    }
+  });
+});
+
 
 /* #Accordion
 ================================================== */
