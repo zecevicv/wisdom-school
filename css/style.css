@@ -1214,10 +1214,10 @@ h6 {
   background-color: #F0F7FF;
   position: relative;
   padding: 2vw 0 8vw 0;
-  background-image: url('../img/icons/flags.svg');
+  background-image: url('../img/bg/reviews-bg.svg');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 50.5vw auto;
+  background-size: 100% auto;
 }
 
 .reviews .section-heading {
