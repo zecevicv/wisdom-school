@@ -413,6 +413,7 @@ h6 {
   left: 0;
   width: 100%;
   display: flex;
+  overflow: hidden;
 }
 
 .separator-top {
@@ -423,11 +424,20 @@ h6 {
   width: 100%;
   transform: translateY(-100%);
   display: flex;
+  overflow: hidden;
 }
 
 .separator img,
 .separator-top img {
   width: 100%;
+}
+
+@media (max-width: 1023.98px) {
+  .separator img,
+  .separator-top img {
+    width: 100%;
+    transform: scaleX(1.1);
+  }
 }
 
 /* #Section Heading
