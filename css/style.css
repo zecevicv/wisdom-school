@@ -911,6 +911,7 @@ h6 {
 ================================================== */
 .hero {
   position: relative;
+  min-height: 48.43vw;
 }
 
 .hero .container {
@@ -948,6 +949,7 @@ h6 {
 @media (max-width: 1023.98px) {
   .hero {
     position: relative;
+    min-height: 200vw;
   }
   
   .hero .container {
